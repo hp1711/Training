@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+</head>
+<body>
+
+     <!-- on click event-->
+    <p id="demo"></p>
+
+    <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+   
+
+    <!-- on mouse over event-->
+    <p id="demo1"></p>
+
+    <button onmouseover="document.getElementById('demo1').innerHTML = Date()">The time is?</button>
+
+    <!-- on mouse out event-->
+    <p id="demo2"></p>
+
+    <button onmouseout="document.getElementById('demo2').innerHTML = Date()">The time is?</button>
+
+    <!-- on key press event-->
+    <p id="demo3"></p>
+
+    <input type="text" onkeypress="document.getElementById('demo3').innerHTML = Date()">
+
+    <!-- on key down event-->
+    <p id="demo4"></p>
+
+    <input type="text" onkeydown="document.getElementById('demo4').innerHTML = Date()">
+    
+    <!-- on key up event-->
+    <p id="demo5"></p>
+
+    <input type="text" onkeyup="document.getElementById('demo5').innerHTML = Date()">
+
+    <!-- on focus event-->
+    <p id="demo6"></p>
+
+    <input type="text" onfocus="document.getElementById('demo6').innerHTML = Date()">   
+
+    <!-- on blur event-->
+    <p id="demo7"></p>
+
+    <input type="text" onblur="document.getElementById('demo7').innerHTML = Date()">
+
+    <!-- on change event-->
+    <p id="demo8"></p>
+
+    <input type="text" onchange="document.getElementById('demo8').innerHTML = Date()">
+
+    <!-- on load event-->
+    <p id="demo9"></p>
+
+    <body onload="document.getElementById('demo9').innerHTML = Date()">
+
+</body>
+</html>
