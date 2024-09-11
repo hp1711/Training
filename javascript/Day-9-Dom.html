@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html>
+        <body>
+        
+        <p id="demo"></p>
+        <p class="demo"></p>
+        <i></i>     
+        <i></i>   
+
+
+        <form name="myForm" action="/action_page.php"
+        onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+        </form>
+
+        
+        <!-- //Events -->
+        <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+
+
+        <button id="myBtn">see date</button>
+        <p id="date"></p>
+        <script>
+        document.getElementById("demo").innerHTML = "Hello World!";
+        document.getElementsByClassName("demo")[0].innerHTML = "How are you?";
+        document.getElementsByTagName("i")[0].innerHTML = "I am fine";
+        document.getElementsByTagName("i")[1].innerHTML = "I am not fine";
+
+        //change the style of the element
+
+        document.getElementById("demo").style.color = "red";
+        document.getElementsByClassName("demo")[0].style.fontSize = "30px";
+        document.getElementsByTagName("i")[0].style.color = "blue";
+        document.getElementsByTagName("i")[1].style.color = "green";
+
+        //change the attribute of the element
+
+        // document.getElementById("demo").setAttribute("class", "demo");
+        document.getElementsByClassName("demo")[0].setAttribute("id", "demo");
+        document.getElementsByTagName("i")[0].setAttribute("class", "demo");
+        document.getElementsByTagName("i")[1].setAttribute("id", "demo");
+
+
+        //create element
+        var para = document.createElement("p");
+        var node = document.createTextNode("This is new.");
+        para.appendChild(node);
+
+        var element = document.getElementById("demo");
+        element.appendChild(para);
+
+        //remove element
+
+        var parent = document.getElementById("demo");
+        var child = document.getElementById("demo");
+        // parent.removeChild(child);
+
+        //replace element
+
+        var para = document.createElement("p");
+        var node = document.createTextNode("This is new.");
+        para.appendChild(node);
+
+        var parent = document.getElementById("demo");
+        var child = document.getElementById("demo");
+        // parent.replaceChild(para, child);
+
+        //Form validation
+
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+
+        //Events listener
+
+        document.getElementById("myBtn").addEventListener("click", displayDate);
+
+        function displayDate() {
+            document.getElementById("date").innerHTML = Date();
+        }
+
+
+        </script>
+        
+        </body>
+        </html> 
+
+
+    <script src="./Day-9-Dom.js"></script>
+</body>
+</html>

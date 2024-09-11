@@ -30,4 +30,3 @@ console.log(map);
 //type of map
 
 console.log(typeof map);
-
