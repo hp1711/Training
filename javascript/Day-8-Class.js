@@ -20,7 +20,7 @@ p2.show();
 
 class Student extends Person {
     constructor(name, age, rollno) {
-        super(name, age);
+        super(name, age); 
         this.rollno = rollno;
     }
     display() {
