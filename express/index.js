@@ -2,6 +2,7 @@ const express= require('express');
 const mongoose = require('mongoose');
 const app = express();
 const port = 3000;
+const authRouter = require('./routes/authRoutes');
 
 // MongoDB Atlas connection string
 const mongoURI = 'mongodb+srv://harshhp1711:abNIAq5eQWqnmmyC@cluster0.so9l1.mongodb.net/harshdb';
@@ -258,3 +259,5 @@ app.delete("/books/:id", (req, res) => {
   res.status(204).send(); // Respond with no content (204 No Content)
 });
 
+
+app.use('/auth',authRouter);

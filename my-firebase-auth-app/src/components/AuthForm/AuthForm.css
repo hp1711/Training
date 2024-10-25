@@ -1,0 +1,70 @@
+/* AuthForm.css */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 400px; /* Limit the width for better UX */
+    width: 100%;
+    background-color: #ffffff; /* White background for contrast */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 26px;
+    text-align: center;
+}
+
+.auth-form input {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Full width */
+    transition: border-color 0.3s;
+}
+
+.auth-form input:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+    background-color: #f8f9fa; /* Light background on focus */
+}
+
+.auth-form button {
+    padding: 12px;
+    background-color: #007bff; /* Primary color */
+    color: #f93a3a; /* Text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-form button:hover {
+    background-color: #0056b3; /* Darken on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .auth-form {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .auth-form h2 {
+        font-size: 22px; /* Adjust heading size */
+    }
+
+    .auth-form input {
+        font-size: 14px; /* Smaller input font size */
+    }
+
+    .auth-form button {
+        font-size: 14px; /* Smaller button font size */
+    }
+}
